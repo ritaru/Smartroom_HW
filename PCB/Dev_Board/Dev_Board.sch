@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ex1-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -251,7 +250,7 @@ Wire Wire Line
 Wire Wire Line
 	6800 5650 7150 5650
 Wire Wire Line
-	7000 3900 7750 3900
+	7000 3900 7925 3900
 Wire Wire Line
 	8275 3900 8275 4000
 Wire Wire Line
@@ -388,7 +387,7 @@ L Regulator_Linear:AMS1117-3.3 U1
 U 1 1 5D889FAA
 P 1500 4000
 F 0 "U1" H 1500 4125 50  0000 C CNN
-F 1 "AMS1117-3.3" H 1800 3600 50  0000 C CNN
+F 1 "AMS1117-3.3" H 2075 4075 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1500 4200 50  0001 C CNN
 F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1600 3750 50  0001 C CNN
 	1    1500 4000
@@ -410,8 +409,6 @@ Wire Wire Line
 Connection ~ 1500 4450
 Wire Wire Line
 	1500 4450 1500 4525
-Wire Wire Line
-	2450 4000 2175 4000
 Text GLabel 3050 2150 2    50   BiDi ~ 0
 RF_P
 Wire Wire Line
@@ -482,8 +479,6 @@ Wire Wire Line
 Connection ~ 2450 4000
 Wire Wire Line
 	2450 4275 2450 4450
-Wire Wire Line
-	2450 4450 1500 4450
 NoConn ~ 10125 4150
 Text GLabel 9925 4050 0    50   Input ~ 0
 MOSI
@@ -917,8 +912,6 @@ F 3 "" H 2450 3550 50  0001 C CNN
 	1    2450 3550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 3550 2450 4000
 $Comp
 L power:+3.3V #PWR0104
 U 1 1 5DE676AD
@@ -955,45 +948,23 @@ $EndComp
 $Comp
 L Device:C_Small C11
 U 1 1 5D8131F2
-P 8100 3700
-F 0 "C11" H 8192 3746 50  0000 L CNN
-F 1 "100n" H 8192 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8100 3700 50  0001 C CNN
-F 3 "~" H 8100 3700 50  0001 C CNN
-	1    8100 3700
+P 8275 3700
+F 0 "C11" H 8367 3746 50  0000 L CNN
+F 1 "100n" H 8367 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8275 3700 50  0001 C CNN
+F 3 "~" H 8275 3700 50  0001 C CNN
+	1    8275 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C10
 U 1 1 5D8132D6
-P 7750 3700
-F 0 "C10" H 7842 3746 50  0000 L CNN
-F 1 "100n" H 7842 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7750 3700 50  0001 C CNN
-F 3 "~" H 7750 3700 50  0001 C CNN
-	1    7750 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C12
-U 1 1 5D813372
-P 8450 3700
-F 0 "C12" H 8542 3746 50  0000 L CNN
-F 1 "100n" H 8542 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8450 3700 50  0001 C CNN
-F 3 "~" H 8450 3700 50  0001 C CNN
-	1    8450 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C13
-U 1 1 5D8133E2
-P 8800 3700
-F 0 "C13" H 8892 3746 50  0000 L CNN
-F 1 "100n" H 8892 3655 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8800 3700 50  0001 C CNN
-F 3 "~" H 8800 3700 50  0001 C CNN
-	1    8800 3700
+P 7925 3700
+F 0 "C10" H 8017 3746 50  0000 L CNN
+F 1 "100n" H 8017 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7925 3700 50  0001 C CNN
+F 3 "~" H 7925 3700 50  0001 C CNN
+	1    7925 3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1001,35 +972,16 @@ Wire Wire Line
 Wire Wire Line
 	8275 3300 8275 3500
 Wire Wire Line
-	8275 3500 8100 3500
+	7925 3500 7925 3600
 Wire Wire Line
-	7750 3500 7750 3600
-Wire Wire Line
-	8275 3500 8450 3500
-Wire Wire Line
-	8800 3500 8800 3600
+	8275 3600 8275 3500
 Connection ~ 8275 3500
 Wire Wire Line
-	8100 3600 8100 3500
-Connection ~ 8100 3500
+	8275 3500 7925 3500
 Wire Wire Line
-	8100 3500 7750 3500
+	7925 3800 7925 3900
 Wire Wire Line
-	8450 3600 8450 3500
-Connection ~ 8450 3500
-Wire Wire Line
-	8450 3500 8800 3500
-Wire Wire Line
-	7750 3800 7750 3900
-Wire Wire Line
-	8100 3800 8100 3900
-Wire Wire Line
-	8450 3900 8450 3800
-Wire Wire Line
-	8450 3900 8800 3900
-Wire Wire Line
-	8800 3900 8800 3800
-Connection ~ 8450 3900
+	8275 3800 8275 3900
 Text Notes 8475 4075 0    50   ~ 0
 Decoupling Capacitors\nPlace near mcu
 Text Notes 2800 4325 0    50   ~ 0
@@ -1045,14 +997,9 @@ Place near XTAL
 Wire Wire Line
 	7675 4800 7975 4800
 Wire Wire Line
-	8100 3900 8275 3900
+	8275 3900 7925 3900
 Connection ~ 8275 3900
-Wire Wire Line
-	8275 3900 8450 3900
-Wire Wire Line
-	8100 3900 7750 3900
-Connection ~ 8100 3900
-Connection ~ 7750 3900
+Connection ~ 7925 3900
 Wire Wire Line
 	975  2150 1875 2150
 Wire Wire Line
@@ -1071,16 +1018,14 @@ $EndComp
 $Comp
 L Device:L_Small L1
 U 1 1 5DA5E931
-P 2075 4000
-F 0 "L1" V 2260 4000 50  0000 C CNN
-F 1 "BLM18BB221SN1D" V 2169 4000 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2075 4000 50  0001 C CNN
-F 3 "~" H 2075 4000 50  0001 C CNN
-	1    2075 4000
-	0    -1   -1   0   
+P 2450 3775
+F 0 "L1" H 2550 3725 50  0000 C CNN
+F 1 "BLM18BB221SN1D" H 2850 3800 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2450 3775 50  0001 C CNN
+F 3 "~" H 2450 3775 50  0001 C CNN
+	1    2450 3775
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1975 4000 1800 4000
 $Comp
 L Device:C_Small C14
 U 1 1 5DA6C348
@@ -1111,9 +1056,6 @@ F 3 "~" H 2775 3550 50  0001 C CNN
 	1    2775 3550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2775 3550 2775 4000
-Connection ~ 2775 4000
 Text Notes 925  2650 0    50   ~ 0
 Isolate RF areas from other components
 Text Notes 8475 4725 0    50   ~ 0
@@ -1125,7 +1067,7 @@ Place XTALs isolated from other components
 Text Notes 7425 5950 0    50   ~ 0
 Populated PG3, PG4 in case of not using TOSC
 Text Notes 825  7600 0    50   ~ 0
-microUSB - MCU-U52105\n\n16MHz - Q24FA20H00232\n32.768kHz - Q13FC1350000400\n\nFuse - MF-FSMF050X-2\n\n4.7uF - CL10A475MQ8NNNC\n1uF - CL10A105KO8NNNC\n0.1uF -  UMK107B104KAHT\n22pF - CL10C220JB8NNNC\n12pF - CL10C120JB8NNNC\n\n100k - RMC16K104FTP\n10k - RMC16K103FTP
+microUSB - MCU-U52105\n\n16MHz - Q24FA20H00232\n32.768kHz - Q13FC1350000400\n\nFuse - MF-FSMF050X-2\n\n4.7uF - CL10A475MQ8NNNC\n1uF - CL10A105KO8NNNC\n0.1uF -  UMK107B104KAHT\n22pF - CL10C220JB8NNNC\n12pF - CL10C120JB8NNNC\n\n100k - RMC16K104FTP\n10k - RMC16K103FTP\n56R - MCR03ERTJ560\n0R - RMC16JPTP
 $Comp
 L Device:D_TVS D1
 U 1 1 5DB1574E
@@ -1349,14 +1291,61 @@ F 3 "" H 10825 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0120
 U 1 1 5D97CC61
 P 10750 3850
-F 0 "#PWR?" H 10750 3700 50  0001 C CNN
+F 0 "#PWR0120" H 10750 3700 50  0001 C CNN
 F 1 "+3.3V" H 10765 4023 50  0000 C CNN
 F 2 "" H 10750 3850 50  0001 C CNN
 F 3 "" H 10750 3850 50  0001 C CNN
 	1    10750 3850
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1800 4000 2025 4000
+Wire Wire Line
+	2450 3875 2450 4000
+Wire Wire Line
+	2450 3550 2450 3625
+Wire Wire Line
+	2450 3625 2775 3625
+Wire Wire Line
+	2775 3625 2775 3550
+Connection ~ 2450 3625
+Wire Wire Line
+	2450 3625 2450 3675
+$Comp
+L Device:LED_Small D2
+U 1 1 5D8F300B
+P 2025 4350
+F 0 "D2" V 2071 4282 50  0000 R CNN
+F 1 "E6C0603URAC1UDA" V 1980 4282 50  0000 R CNN
+F 2 "" V 2025 4350 50  0001 C CNN
+F 3 "~" V 2025 4350 50  0001 C CNN
+	1    2025 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5D8F323E
+P 2025 4125
+F 0 "R4" H 1925 4125 50  0000 C CNN
+F 1 "56R" H 2150 4125 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2025 4125 50  0001 C CNN
+F 3 "~" H 2025 4125 50  0001 C CNN
+	1    2025 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2025 4450 1500 4450
+Connection ~ 2025 4450
+Wire Wire Line
+	2025 4450 2450 4450
+Wire Wire Line
+	2025 4025 2025 4000
+Connection ~ 2025 4000
+Wire Wire Line
+	2025 4000 2450 4000
+Wire Wire Line
+	2025 4225 2025 4250
 $EndSCHEMATC
